@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Quiz de Eder</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+
+    <div class="position-relative form rounded p-5 bg-success d-flex flex-column ">
+        <div class="question mb-5 text-center">
+            <h1 id="questionText">Text of question sample</h1>
+        </div>
+
+        <div class="answers d-flex flex-column">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1" id ="answerText1">
+                  
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                <label class="form-check-label" for="flexRadioDefault2" id ="answerText2">
+                  
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                <label class="form-check-label" for="flexRadioDefault3" id ="answerText3">
+                  C
+                </label>
+              </div>
+        </div>
+        <div class="btn-group mt-5 w-50 mx-auto gap-3" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-primary" id="btnCheck">Comprobar</button>
+        </div>
+        <button type="button" class="mt-5 position-absolute bottom-0 end-0 btn btn-primary" data-bs-toggle="modal" data-bs-target="#clueModal" id="btnClue">Pista</button>
+    </div>
+
+    <!-- * MODAL  -->
+
+  
+  <!-- Modal of Error -->
+  <div class="modal fade " id="errorModal" tabindex="-1" data-bs-backdrop = "static" aria-labelledby="errorModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content bg-danger-subtle">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="errorModalLabel">Respuesta Incorrecta</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Oye, que has fallado :(, Dale a Pista anda 😁
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">De acuerdo :(</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal of Correct -->
+  <div class="modal fade " id="correctModal" tabindex="-1" data-bs-backdrop = "static" aria-labelledby="correctModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content bg-success">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="correctModalLabel">Respuesta Incorrecta</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Correcto! 😁
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="btnNext">Siguiente</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal of Clue -->
+  <div class="modal fade" id="clueModal" tabindex="-1" data-bs-backdrop = "static" aria-labelledby="clueModalLabel" aria-hidden="true">
+    <div class="modal-dialog ">
+      <div class="modal-content bg-info-subtle">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="clueModalLabel">Pista</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="clue">
+          Pistilla: asjdks
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">A, es verdad jeje</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ! IGNORE EVERYTHING  -->
+
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

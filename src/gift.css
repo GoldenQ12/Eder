@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+}
+
+img{
+    width: 25%;
+    cursor: pointer;
+}
+
+
+
+
+#codigo{
+    display: none;
+    animation: image 2s ease-in-out;
+    font-size: 3rem;
+    color: rgb(245, 110, 0);
+    font-weight: bold;
+    margin: 50px;
+}
+.image{
+    scale: 1;
+    animation: image 2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.image.mx-auto.img-fluid.img-thumbnail.animate{
+    animation: image 2s ease-in-out;
+
+}
+.content{
+    animation: image 2s ease-in-out;
+}
+
+@keyframes image {
+    0%{
+        scale: 0;
+    }
+    100%{
+        scale: 1;
+    }
+}
+
+
